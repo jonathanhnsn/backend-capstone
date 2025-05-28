@@ -8,17 +8,26 @@ const routes = [
   },
   {
     method: "GET",
-    path: "/users",
+    path: "/user",
     handler: (request, h) => {
       return 'halo, ini user'
     }
   },
   {
     method: "GET",
-    path: "/users/{userID}",
+    path: "/user/{userID}",
     handler: (request, h) => {
       const {userID} = request.params;
       return `halo, ini user ${userID}`;
+    }
+  },
+  {
+    method: "GET",
+    path: "/user/{userID}/{name}",
+    handler: (request, h) => {
+      const {userID} = request.params;
+      const {name} = request.params;
+      return `halo, ini ${name} dengan id ${userID}`;
     }
   },
   {
