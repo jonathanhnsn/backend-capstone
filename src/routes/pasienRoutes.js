@@ -9,27 +9,27 @@ const {
 const pasienRoutes = [
   {
     method: "POST",
-    path: "/pasien",
+    path: "/pasiens",
     handler: addPasienHandler,
   },
   {
     method: "GET",
-    path: "/pasien",
+    path: "/pasiens",
     handler: getAllPasienHandler,
   },
   {
     method: "GET",
-    path: "/pasien/{pasienId}",
+    path: "/pasiens/{pasienId}",
     handler: getPasienByIdHandler,
   },
   {
     method: "PUT",
-    path: "/pasien/{pasienId}",
+    path: "/pasiens/{pasienId}",
     handler: updatePasienByIdHandler,
   },
   {
     method: "DELETE",
-    path: "/pasien/{pasienId}",
+    path: "/pasiens/{pasienId}",
     handler: deletePasienByIdHandler,
   },
 ];
