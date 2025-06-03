@@ -16,7 +16,7 @@ const init = async () => {
   server.route(rekamMedisRoutes);
 
   await server.start();
-  console.log(`Server berjalan di ${server.info.uri}`);
+  console.log(`MediFace | Server berjalan di ${server.info.uri}`);
 };
 
 init();
