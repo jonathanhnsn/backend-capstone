@@ -1,3 +1,4 @@
+require("dotenv").config();
 const Hapi = require("@hapi/hapi");
 const routes = require("./routes/routes");
 const pasienRoutes = require("./routes/pasienRoutes");
@@ -6,8 +7,13 @@ const rekamMedisRoutes = require("./routes/rekamMedisRoutes");
 
 const init = async () => {
   const server = Hapi.server({
-    port: 5000,
-    host: "localhost",
+    port: process.env.PORT,
+    host: process.env.HOST,
+    routes: {
+      cors: {
+        origin: ["*"],
+      },
+    },
   });
 
   server.route(routes);
